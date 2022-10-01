@@ -1,0 +1,9 @@
+ng s --prod: compilar mais compactado para saber como fica em produção "simulação para teste das diferenças"
+
+
+ng b: para buildar o projeto e gera a pasta para subir em um iis ou hospedar em um servidor
+
+ng b --prod: buildar para produção (comprimi melhor os arquivos gerado)
+
+
+npm audit fix --force: corrigir falha na versão de algum pacote
