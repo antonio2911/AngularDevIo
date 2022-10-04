@@ -1,0 +1,44 @@
+<div class="container main-container">
+    <h3>Interpolação</h3>
+    <p [ngClass]="{
+        'text-secondary': contador < 3,
+        'text-success': contador >=3,
+        'text-warning': contador >=5,
+        'text-danger': contador >=9
+        }">O numero de clicks e: {{contador}}</p>
+    <br>
+    <br>
+    <h3>Property Binding</h3>
+    <!--[] => o angular que cuida-->
+    <button class="btn btn-info" [disabled]="contador >= 10">Info</button>
+
+
+    <h3>Event Binding</h3>
+    <button class="btn btn-warning" (click)="clickEvento()">Click-me</button>
+    <button class="btn btn-primary ms-4" (click)="zeraContador()" [disabled]="disabledZeraContador()">Zerar contador</button>
+    <br>
+    <br>
+    <br>
+    <h3>Two-Way Data Binding</h3>
+    <input type="text" (keyup)="evento($event)" placeholder="Digite seu nome">
+    <br><br>
+    <label for="">Seu nome e: {{texto}} </label>
+
+    <br>
+    <br>
+    <br>
+    <h3>Forma de fazer o two-way data binding</h3>
+
+    <input type="text" placeholder="Digite Seu Nome Aqui" [ngModel]="nome" (ngModelChange)="nome = $event">
+    <br><br>
+    <label for="">Seu nome e: {{nome}} </label>
+
+    <br>
+    <br>
+    <br>
+    <h3>Forma de fazer o two-way data binding</h3>
+
+    <input type="text" placeholder="Digite Seu Nome Aqui" [(ngModel)]="nome">
+    <br><br>
+    <label for="" [ngClass]="nome">Seu nome e: {{nome}} </label>
+</div>

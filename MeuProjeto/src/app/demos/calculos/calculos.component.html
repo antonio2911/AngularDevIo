@@ -1,0 +1,9 @@
+<div class="container main-container">
+    <h3>Alguns Calculos</h3>
+    <h6>Regra de 3 simples</h6>
+<input type="text" [(ngModel)]="valor" placeholder="Primeiro Valor">
+<input type="number" [(ngModel)]="por" placeholder="valor ou porcentagem">
+<input type="number" [(ngModel)]="outroValor" placeholder="Valor de parametro">
+<button class="btn btn-info mx-4" type="submit" (click)="calcularRegraDeTres()">ver alteração</button>
+<p>Resultado: {{resultado}}</p>
+</div>

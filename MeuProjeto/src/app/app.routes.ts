@@ -1,4 +1,6 @@
 import { Routes } from "@angular/router";
+import { CalculosComponent } from "./demos/calculos/calculos.component";
+import { DataBindingComponent } from "./demos/data-binding/data-binding.component";
 import { ContatoComponent } from "./institucional/contato/contato.component";
 import { SobreComponent } from "./institucional/sobre/sobre.component";
 import { HomeComponent } from "./navegacao/home/home.component";
@@ -10,5 +12,8 @@ export const rootRoutesConfig: Routes = [
     {path: ' ', redirectTo: '/home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'contato', component: ContatoComponent},
-    {path: 'sobre', component: SobreComponent}
+    {path: 'sobre', component: SobreComponent},
+    {path: 'features', component: DataBindingComponent},
+    {path: 'calculos', component: CalculosComponent}
+
 ]
