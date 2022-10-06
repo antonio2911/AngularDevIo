@@ -1,1 +1,0 @@
-select CODIGO from TPRDCODIGO where codigo like '%88182%'

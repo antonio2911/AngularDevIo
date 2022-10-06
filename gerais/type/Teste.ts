@@ -1,3 +1,0 @@
-class Teste {
-    numero: number;
-}

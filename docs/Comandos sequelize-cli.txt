@@ -1,7 +1,0 @@
-criar uma nova seed ou query do banco
-npx sequelize-cli db:seed:all
-npx sequelize-cli seed:generate --name demo-cadastro
-npx sequelize-cli db:migrate
-npx sequelize-cli model:create --name Cadastro --attributes nome:string,sobrenome:string,nickname:string,email:string,senha:string,sexo:string,telefone:INTEGER,endereco:string,profissao:string,sMinimoDesejado:INTEGER,assinante:boolean
-npx sequelize-cli init
-npm install sequelize sequelize-cli path

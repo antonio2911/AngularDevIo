@@ -1,2 +1,0 @@
-mouseCursorPosition
-padroes de projeto que utiliza herança quebra o solid
