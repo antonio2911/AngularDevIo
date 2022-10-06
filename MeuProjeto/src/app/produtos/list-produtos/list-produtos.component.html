@@ -1,0 +1,29 @@
+<div class="container main-container">
+    <h3>test view</h3>
+    <div class="row text-center">
+        <div class="col-md-4" *ngFor="let produto of produtos" style="padding-bottom: 30px;">
+            <div class="card h-100">
+              <a class="text-decoration-none" [routerLink]="['/produto-detalhe', 'produto.id']">
+                <div style="align-content:center;">
+                    <img [src]="produto.imagem" [alt]="produto.nome" height="164px" width="253px">
+                </div>
+              </a>
+
+              <div class="card-body">
+                <h4 class="card-title">{{produto.nome | titlecase}}</h4>
+                <p>Por Apenas:</p>
+                <div>
+                    <h4>{{produto.valor | currency:'BRL':'symbol':'1.2-2':'pt'}}</h4>
+                </div>
+              </div>
+
+              <div class="card-footer">
+                 <a href="" class="btn btn-primary">
+                    <span class="fa fa-shopping-card"></span>
+                    Comprar
+                </a>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

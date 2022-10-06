@@ -12,7 +12,12 @@ import { rootRoutesConfig } from './app.routes';
 import { RouterModule } from '@angular/router';
 import { DataBindingComponent } from './demos/data-binding/data-binding.component';
 import { CalculosComponent } from './demos/calculos/calculos.component';
-
+import { ProdutoServices } from './produtos/produtos.service';
+import { ListProdutosComponent } from './produtos/list-produtos/list-produtos.component';
+import { HttpClientModule } from '@angular/common/http';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,17 +27,20 @@ import { CalculosComponent } from './demos/calculos/calculos.component';
     SobreComponent,
     ContatoComponent,
     DataBindingComponent,
-    CalculosComponent
+    CalculosComponent,
+    ListProdutosComponent
   ],
   imports: [
     BrowserModule,
     //forRoot => informar que e o arquivo de rotas principal da aplicação
     [RouterModule.forRoot(rootRoutesConfig, {useHash: false})],
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [
+  providers: [ // declara serviços
     //o que e carregado como padrão de inicialização nos parametros da url "para teste muda o conteudo"
-    {provide: APP_BASE_HREF, useValue: '/'}
+    {provide: APP_BASE_HREF, useValue: '/'},
+    ProdutoServices
   ],
   bootstrap: [AppComponent]
 })

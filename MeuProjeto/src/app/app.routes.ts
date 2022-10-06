@@ -4,6 +4,7 @@ import { DataBindingComponent } from "./demos/data-binding/data-binding.componen
 import { ContatoComponent } from "./institucional/contato/contato.component";
 import { SobreComponent } from "./institucional/sobre/sobre.component";
 import { HomeComponent } from "./navegacao/home/home.component";
+import { ListProdutosComponent } from "./produtos/list-produtos/list-produtos.component";
 
 export const rootRoutesConfig: Routes = [
     //pesquisar sobre o pathMatch
@@ -14,6 +15,7 @@ export const rootRoutesConfig: Routes = [
     {path: 'contato', component: ContatoComponent},
     {path: 'sobre', component: SobreComponent},
     {path: 'features', component: DataBindingComponent},
-    {path: 'calculos', component: CalculosComponent}
+    {path: 'calculos', component: CalculosComponent},
+    {path: 'produtos', component: ListProdutosComponent}
 
 ]

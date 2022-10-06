@@ -7,12 +7,13 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class CalculosComponent {
-public valor:any;
-public por:any
-public outroValor:any
-public resultado:any
-public calcularRegraDeTres(){
-var calc = (this.outroValor * this.por) / this.valor
-this.resultado = calc
-}
+  constructor(){}
+  public valor:number; // ou ignora com uma variavel no tsconfig.json ou inserir um ! apos o nome da variavel
+  public por!:number;
+  public outroValor:number;
+  public resultado:string = "";
+  public calcularRegraDeTres(){
+    var calc = (this.outroValor * this.por) / this.valor
+    this.resultado = calc.toFixed(2)
+  }
 }
