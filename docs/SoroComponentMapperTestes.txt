@@ -1,0 +1,87 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using RM.Pep.Prescricao.Server.Negocio.PrescricaoItemSoroComponente;
+using RM.Pep.Prescricao.Server.SoroComponente;
+using RM.Pep.Prescricao.Server.SoroComponente.Mapper;
+using RM.Pep.Shared.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace RM.Pep.Prescricao.TesteUnitario
+{
+  [TestClass]
+  public class SoroComponenteMapperTestes
+  {
+    private readonly SoroComponenteDBModel soroComponente = new SoroComponenteDBModel()
+    {
+      Codcoligada = 1,
+      CodSoroComponente = 1,
+      Sequencial = 1,
+      Descricao = "Testes",
+      Codprescricao = 1,
+      Idprd = 1,
+      Codapresentacao = 1,
+      Quantidade = 1,
+      Codund = "Teste",
+      Status = 3,
+      Tipo = 1
+    };
+    private readonly SoroComponenteNegocio soronegocio = new SoroComponenteNegocio()
+    {
+      CodColigada = 1,
+      CodSoroComponente = 1,
+      Sequencial = 1,
+      Descricao = "Teste2",
+      CodPrescricao = 1,
+      IdPrd = 1,
+      CodApresentacao = 1,
+      Quantidade = 2,
+      CodUnd = "Teste2",
+      Tipo = EnumTipoSoroComponente.Componente,
+      Status = EnumPrescricaoStatus.Suspenso
+    };
+    [TestMethod]
+    public void DeveMapearParaNegocio(SoroComponenteDBModel componente, SoroComponenteNegocio negocio)
+    {
+      Assert.AreEqual(componente, negocio);
+    }
+    [TestMethod]
+    public void Negocio()
+    {
+      var negocio = soroComponente.ToModel();
+      Assert.AreEqual(soroComponente.Codcoligada, negocio.CodColigada);
+      Assert.AreEqual(soroComponente.CodSoroComponente, negocio.CodSoroComponente);
+      Assert.AreEqual(soroComponente.Sequencial, negocio.Sequencial);
+      Assert.AreEqual(soroComponente.Descricao, negocio.Descricao);
+      Assert.AreEqual(soroComponente.Codprescricao, negocio.CodPrescricao);
+      Assert.AreEqual(soroComponente.Idprd, negocio.IdPrd);
+      Assert.AreEqual(soroComponente.Codapresentacao, negocio.CodApresentacao);
+      Assert.AreEqual(soroComponente.Quantidade, negocio.Quantidade);
+      Assert.AreEqual(soroComponente.Codund, negocio.CodUnd);
+      Assert.AreEqual(soroComponente.Status, negocio.Status);
+      Assert.AreEqual(soroComponente.Tipo, negocio.Tipo);
+    }
+    [TestMethod]
+    public void DeveMappearParaDbModel()
+    {
+      var negocio = new List<SoroComponenteNegocio>()
+      {
+        soronegocio
+      };
+      var soroComponentDbModel = negocio.ToEntity().FirstOrDefault();
+      Assert.AreEqual(soronegocio.CodColigada, soroComponentDbModel.Codcoligada);
+      Assert.AreEqual(soronegocio.CodSoroComponente, soroComponentDbModel.CodSoroComponente);
+      Assert.AreEqual(soronegocio.Sequencial, soroComponentDbModel.Sequencial);
+      Assert.AreEqual(soronegocio.Descricao, soroComponentDbModel.Descricao);
+      Assert.AreEqual(soronegocio.CodPrescricao, soroComponentDbModel.Codprescricao);
+      Assert.AreEqual(soronegocio.IdPrd, soroComponentDbModel.Idprd);
+      Assert.AreEqual(soronegocio.CodApresentacao, soroComponentDbModel.Codapresentacao);
+      Assert.AreEqual(soronegocio.Quantidade, soroComponentDbModel.Quantidade);
+      Assert.AreEqual(soronegocio.CodUnd, soroComponentDbModel.Codund);
+      Assert.AreEqual(soronegocio.Status, soroComponentDbModel.Status);
+      Assert.AreEqual(soronegocio.Tipo, soroComponentDbModel.Tipo);
+    }
+  }
+}

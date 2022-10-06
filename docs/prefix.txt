@@ -1,0 +1,6 @@
+passar apenas o DBS.Dialect como parametro do metodo
+tipo IsqlDialect 
+
+NoLockStatment join e no from 
+ParameterPrexix = where @ oracle : sql
+tudo que for select

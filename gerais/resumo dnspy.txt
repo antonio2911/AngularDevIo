@@ -1,0 +1,11 @@
+https://www.bleepingcomputer.com/news/security/trojanized-dnspy-app-drops-malware-cocktail-on-researchers-devs/
+
+dnspy
+
+https://github.com/dnSpy/dnSpy/releases/tag/v6.1.8
+
+debbug parado para as threds do serviço deixando o sistema parado
+o que e o host do rmhostconfig
+
+https://centraldeatendimento.totvs.com/hc/pt-br/articles/360018978631-RM-Frame-Desabilitar-o-JobRunner
+reverse dnspy udemy

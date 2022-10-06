@@ -1,0 +1,3 @@
+rmcontrolle e uma extensão do controller
+shift alt f12 call stack
+tanto no vscode quanto para vs

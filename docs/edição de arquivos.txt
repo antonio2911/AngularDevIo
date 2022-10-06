@@ -1,0 +1,26 @@
+Duvidas
+
+SqlClinicalEvolution
+
+SqlDiscriminador delete
+
+SqlCuidadoProcedimento Detalhar indentação
+
+ListarEspecialidadesPorNome pode importar arquivo= SqlEspecialidades
+
+ListarEspecialidadesPorNome arquivo = SqlEspecialidades (refatorar)
+
+public static string ListarGrupo(ISqlDialect dialeto) inserir os metodos do zero arquivo(SqlExame)
+
+refatorado:
+public static string HasSigned(string tabela, string chavePrimaria, ISqlDialect dialeto) => $@" arquivo(formularioDinamico queries)
+
+_Dbs.QuerySelect
+_Dbs.Query(qualquer coisa não fazer)
+
+
+PAREI NO SqlParecerEspecialista.cs
+
+DELETE = DEIXAR COMO ESTAR. (PARAMETER) NÃO PODE NOLOCK
+NÃO PODE QUERYEXEC OU QUALQUER OUTRO QUERY
+

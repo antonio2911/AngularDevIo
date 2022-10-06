@@ -1,0 +1,3 @@
+endereço do banco totvs : POASRVDBODEV005.sp01.local\SQL2019
+user rm
+password rm

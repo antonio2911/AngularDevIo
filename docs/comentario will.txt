@@ -1,0 +1,13 @@
+    // Validação recursiva do GrupoFator dentro do GrupoFator
+    //AreEqual(uiModel.Opcoes, negocio.Fatores); // É usado pelo GrupoFatorTEVMapper usando o FatorTEVMapper... Pode ser removido e testado em um FatorTEVMapperTestes
+//private void AreEqual(IEnumerable<FatorTEVUiModel> uiModels, IEnumerable<FatorTEVNegocio> negocios)
+    //{
+    //  foreach (var item in uiModels?.Zip(negocios, (a, b) => new { uiModel = a, negocio = b }))
+    //  {
+    //    Assert.AreEqual(item.uiModel.Id, item.negocio.CodFatorTev);
+    //    Assert.AreEqual(item.uiModel.Descricao, item.negocio.Descricao);
+    //    Assert.AreEqual(item.uiModel.Tooltip, item.negocio.Observacao);
+    //    Assert.AreEqual(item.uiModel.Pontuacao, item.negocio.Pontuacao);
+    //    Assert.AreEqual(item.uiModel.Obrigatorio, item.negocio.Obrigatorio);
+    //  }
+    //}

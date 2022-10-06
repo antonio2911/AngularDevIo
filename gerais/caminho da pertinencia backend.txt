@@ -1,0 +1,16 @@
+dentro do sistema RM a parte de unidade de atendimento comunica com o pep pela class no backend
+PepSettingsController.cs
+
+o fluxo da pertinencia e
+PepSettingsController
+return Json(Server.ObterParametrosUnidadeAtendimento(codUnidade)
+public UIModel.ParametrosUnidade
+
+Dentro de ParametrosUnidade.cs
+e preciso inserir o get e set do item correspondente
+
+ParametrosUnidadeDbModelMapper.cs inserir no mapper
+Queries.cs
+
+NO front 
+care-unit.settings

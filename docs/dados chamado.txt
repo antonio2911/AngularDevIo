@@ -1,0 +1,4 @@
+unidade terapia intensiva adulto
+ana flavia gonçalves
+
+var sql = PlanejamentoTerapeuticoPrescricaoMedicaQueries.ListarHorariosAprazamento(DBS.Dialect)
